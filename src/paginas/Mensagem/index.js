@@ -4,12 +4,11 @@ import { useRoute } from "@react-navigation/native";
 import PaginaBase from "../PaginaBase";
 
 export default function Mensagem() {
-    const route = useRoute();
-    // const { nomePet } = route.params;
-
     const [nome, onChangeNome] = React.useState('');
     const [telefone, onChangeTelefone] = React.useState('');
     const [mensagem, onChangeMensagem] = React.useState('');
+    const rota = useRoute();
+    // const { nomePet } = rota.params;
 
     return (
         <View style={styles.container}>

@@ -7,6 +7,7 @@ import Cadastro from "./../paginas/Cadastro/index";
 import ListaPets from "./../paginas/ListaPets/index";
 import Mensagem from "./../paginas/Mensagem/index";
 import { Image } from 'react-native';
+import Sobre from './../paginas/Sobre/index';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -25,7 +26,7 @@ function TabRoutes() {
           )
         }}
       />
-      <Tab.Screen name="Mensagens" component={Mensagem} 
+      <Tab.Screen name="Mensagem" component={Mensagem} 
         options={{
           tabBarIcon: () => (
             <Image source={require('../assets/mensagens.png')} style={{ width: 24, height: 24 }}/>
@@ -61,6 +62,7 @@ export default function Navigation() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Cadastro" component={Cadastro} />
         <Stack.Screen name="Tab" component={TabRoutes} />
+        <Stack.Screen name="Sobre" component={Sobre} />
       </Stack.Navigator>
     </NavigationContainer>
   );
