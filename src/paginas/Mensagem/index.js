@@ -1,11 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput, ScrollView } from "react-native";
+import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import PaginaBase from "../PaginaBase";
 
 export default function Mensagem() {
     const route = useRoute();
-    const { nomePet } = route.params;
+    // const { nomePet } = route.params;
 
     const [nome, onChangeNome] = React.useState('');
     const [telefone, onChangeTelefone] = React.useState('');
@@ -44,7 +44,7 @@ export default function Mensagem() {
                                 <Text style={styles.label}>Nome do animal</Text>
                                 <TextInput
                                     style={styles.input}
-                                    value={nomePet}
+                                    // value={nomePet}
                                 />
                             </View>
 
