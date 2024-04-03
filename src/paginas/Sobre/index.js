@@ -10,8 +10,8 @@ import PaginaBase from "../PaginaBase";
 import { Link, useRoute } from "@react-navigation/native";
 import uuid from "react-native-uuid";
 export default function Sobre({ navigation }) {
-  const rota = useRoute();
-  const { nome, imagem, descricao, localidade } = rota.params;
+  const rotas = useRoute();
+  const { nome, imagem, descricao, localidade } = rotas.params;
 
   return (
     <View style={styles.container}>
@@ -35,7 +35,9 @@ export default function Sobre({ navigation }) {
                   <Link
                     to={{
                       screen: "Mensagem",
-                      params: { nomePet: nome },
+                      params: { 
+                        nomePet: "Dunga",
+                      },
                     }}
                     style={styles.local}
                   >
@@ -48,9 +50,7 @@ export default function Sobre({ navigation }) {
                   <Link
                     to={{
                       screen: "Mensagem",
-                      params: {
-                        nomePet: nome,
-                      },
+                      params: { nomePet: nome }
                     }}
                     style={styles.local}
                   >
